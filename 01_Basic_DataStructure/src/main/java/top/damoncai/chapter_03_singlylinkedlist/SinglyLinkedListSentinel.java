@@ -1,20 +1,20 @@
-package top.damoncai.chapter_02_array.case_02_singlylinkedlist;
+package top.damoncai.chapter_03_singlylinkedlist;
 
 import java.util.Iterator;
 import java.util.function.Consumer;
 
 /**
  *
- * 单项列表实现
+ * 单项列表实现 - 哨兵节点
  * @author zhishun.cai
  * @date 2024/10/24
  */
-public class SinglyLinkedList<T> implements Iterable<T> {
+public class SinglyLinkedListSentinel<T> implements Iterable<T> {
 
     /**
      * 头结点
      */
-    public Node<T> head;
+    public Node<T> head = new Node<T>(null);
 
     /**
      * 头部添加数据
@@ -22,8 +22,8 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      */
     public void addFirst(T data) {
         Node<T> node = new Node(data);
-        // 这里不需要关系头结点是否为null
-        node.next = head;
+
+        node.next = head.next;
         head = node;
     }
 
@@ -33,10 +33,6 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      */
     public void addLast(T data) {
         Node<T> node = head;
-        if(head == null) {
-            head = new Node(data);
-            return;
-        }
         // 找到尾部节点
         while(node.next != null) {
             node = node.next;
@@ -51,7 +47,7 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      */
     public T get(int index) {
         int i = 0;
-        Node<T> node = head;
+        Node<T> node = head.next;
         while (node != null) {
             if(i++ == index) {
                 return node.data;
@@ -67,12 +63,7 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      * @param data
      */
     public void insert(int index, T data) {
-        if(0 == index) {
-            addFirst(data);
-            return;
-        }
-
-        int i = 1;
+        int i = 0;
         Node<T> nodeData = new Node(data);
         Node<T> node = head;
         while (node != null) {
@@ -91,13 +82,13 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      * @return
      */
     public T removeFirst() {
-        if(head == null) {
+        Node<T> node = head.next;
+        if(node == null) {
             return null;
         }
 
-        T data = head.data;
-        head = head.next;
-        return data;
+        head.next = node.next;
+        return node.data;
     }
 
     /**
@@ -106,13 +97,10 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      * @return
      */
     public T remove(int index) {
-        if(index == 0) {
-            return removeFirst();
-        }
 
-        int i = 1;
+        int i = 0;
         Node<T> node = head;
-        while (node != null) {
+        while (node != null && node.next != null) {
             if(index == i++ ) {
                 T data = node.next.data;
                 node.next = node.next.next;
@@ -128,7 +116,7 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      * @param consumer
      */
     public void loop(Consumer<T> consumer) {
-        Node<T> node = head;
+        Node<T> node = head.next;
         while (node != null) {
             consumer.accept(node.data);
             node = node.next;
@@ -144,7 +132,7 @@ public class SinglyLinkedList<T> implements Iterable<T> {
      * 迭代器
      */
     private class NodeIterator implements Iterator<T> {
-        Node<T> node = head;
+        Node<T> node = head.next;
         @Override
         public boolean hasNext() {
             return node != null;

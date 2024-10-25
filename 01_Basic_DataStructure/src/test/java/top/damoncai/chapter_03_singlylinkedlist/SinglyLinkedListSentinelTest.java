@@ -1,13 +1,15 @@
-package top.damoncai.chapter_02_array.case_02_singlylinkedlist;
+package top.damoncai.chapter_03_singlylinkedlist;
 
+import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
  * @author zhishun.cai
- * @date 2024/10/24
+ * @date 2024/10/25
  */
-public class SinglyListLinkedTest {
-    SinglyLinkedList<Integer> singlyList = new SinglyLinkedList();
+public class SinglyLinkedListSentinelTest{
+
+    SinglyLinkedListSentinel<Integer> singlyList = new SinglyLinkedListSentinel();
 
     @Test
     public void addFitstTest() {
@@ -83,4 +85,5 @@ public class SinglyListLinkedTest {
 
         System.out.println(singlyList.remove(5));
     }
+
 }
