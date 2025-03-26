@@ -1,9 +1,8 @@
 package top.damoncai.chapter_19_LinkedListMergeN;
 
-import org.junit.Test;
 import top.damoncai.chapter_18_LinkedListMergeTwo.Node;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

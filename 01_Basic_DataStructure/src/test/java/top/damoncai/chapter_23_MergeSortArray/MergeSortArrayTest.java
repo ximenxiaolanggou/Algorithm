@@ -1,10 +1,8 @@
 package top.damoncai.chapter_23_MergeSortArray;
 
-import org.junit.Test;
-
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

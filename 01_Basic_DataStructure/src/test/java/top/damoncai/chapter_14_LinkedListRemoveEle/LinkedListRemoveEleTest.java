@@ -1,9 +1,7 @@
 package top.damoncai.chapter_14_LinkedListRemoveEle;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

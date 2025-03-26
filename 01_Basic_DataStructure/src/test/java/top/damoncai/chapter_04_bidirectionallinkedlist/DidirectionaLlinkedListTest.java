@@ -1,9 +1,7 @@
 package top.damoncai.chapter_04_bidirectionallinkedlist;
 
-import org.junit.Test;
-import top.damoncai.chapter_03_singlylinkedlist.SinglyLinkedList;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
 /**
  *
  *

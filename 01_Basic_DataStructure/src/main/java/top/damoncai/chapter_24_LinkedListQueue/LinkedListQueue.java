@@ -1,11 +1,14 @@
 package top.damoncai.chapter_24_LinkedListQueue;
 
+import lombok.Data;
+
 import java.util.Iterator;
 
 /**
  * @author zhishun.cai
  * @date 2025/2/10
  */
+@Data
 public class LinkedListQueue<E> implements Queue<E>, Iterable<E>{
 
     private class Node<E> {
@@ -34,6 +37,9 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E>{
 
     public LinkedListQueue(int capacity) {
         this.capacity = capacity;
+    }
+
+    public LinkedListQueue() {
     }
 
     @Override
@@ -74,6 +80,11 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E>{
     @Override
     public boolean isEmpty() {
         return head == tail;
+    }
+
+    @Override
+    public boolean isFull() {
+        return size == capacity;
     }
 
     @Override

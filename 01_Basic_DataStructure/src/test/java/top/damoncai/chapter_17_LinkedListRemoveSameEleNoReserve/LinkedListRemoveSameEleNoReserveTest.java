@@ -1,9 +1,8 @@
 package top.damoncai.chapter_17_LinkedListRemoveSameEleNoReserve;
 
-import org.junit.Test;
 import top.damoncai.chapter_16_LinkedListRemoveSameEleReserve.Node;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

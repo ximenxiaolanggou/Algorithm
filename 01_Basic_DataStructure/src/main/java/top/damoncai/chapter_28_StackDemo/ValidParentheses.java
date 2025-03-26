@@ -1,4 +1,4 @@
-package top.damoncai.chapter_28_ValidParentheses;
+package top.damoncai.chapter_28_StackDemo;
 
 import top.damoncai.chapter_27_ArrayStack.ArrayStack;
 
@@ -8,9 +8,9 @@ import top.damoncai.chapter_27_ArrayStack.ArrayStack;
  *
  * 有效字符串需满足：
  *
- * 1.左括号必须用相同类型的右括号闭合。
- * 2.左括号必须以正确的顺序闭合。
- * 3.每个右括号都有一个对应的相同类型的左括号。
+ * 1.左括号必须用相同类型的右括号闭合
+ * 2.左括号必须以正确的顺序闭合
+ * 3.每个右括号都有一个对应的相同类型的左括号
  *
  * @author zhishun.cai
  * @date 2025/2/18
@@ -94,6 +94,6 @@ public class ValidParentheses {
         stack.pop();
       }
     }
-    return stack.isEmpty();
+    return stack.isEmpty(); // 3971
   }
 }

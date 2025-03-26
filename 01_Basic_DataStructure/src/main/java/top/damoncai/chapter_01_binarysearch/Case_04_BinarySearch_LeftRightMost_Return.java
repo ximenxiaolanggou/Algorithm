@@ -1,6 +1,5 @@
 package top.damoncai.chapter_01_binarysearch;
 
-import org.junit.Test;
 
 /**
  *
@@ -16,17 +15,6 @@ import org.junit.Test;
 public class Case_04_BinarySearch_LeftRightMost_Return {
 
 
-
-    @Test
-    public void mian() {
-        int arr[] = {1,1,3,3,4,5,6,7};
-        int target = 2;
-        int targetIndex = binarySearchLeftMost(arr,target);
-        System.out.println(targetIndex);
-        targetIndex = binarySearchRightMost(arr,target);
-        System.out.println(targetIndex);
-
-    }
 
 
     /**

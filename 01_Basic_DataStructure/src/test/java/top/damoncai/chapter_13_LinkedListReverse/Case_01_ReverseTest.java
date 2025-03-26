@@ -1,10 +1,7 @@
 package top.damoncai.chapter_13_LinkedListReverse;
 
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai
@@ -12,10 +9,10 @@ import static org.junit.Assert.*;
  */
 public class Case_01_ReverseTest {
 
-    public ListNode<Integer> listNode = new ListNode();
+    public static ListNode<Integer> listNode = new ListNode();
 
-    @Before
-    public void before() {
+    @BeforeAll
+    public static void before() {
         listNode.header = new Node(1);
         listNode.header.next = new Node(2);
         listNode.header.next.next = new Node(3);

@@ -1,8 +1,6 @@
 package top.damoncai.chapter_22_LinkedListAdjustRing;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

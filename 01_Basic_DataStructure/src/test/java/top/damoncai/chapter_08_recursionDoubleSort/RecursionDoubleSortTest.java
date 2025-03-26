@@ -1,11 +1,10 @@
 package top.damoncai.chapter_08_recursionDoubleSort;
 
-import org.junit.Test;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

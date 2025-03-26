@@ -1,10 +1,9 @@
 package top.damoncai.chapter_09_recursionInsertionSort;
 
-import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

@@ -1,5 +1,6 @@
 package top.damoncai.chapter_25_ArrayQueue;
 
+import lombok.Data;
 import top.damoncai.chapter_24_LinkedListQueue.Queue;
 
 import java.util.Iterator;
@@ -11,6 +12,7 @@ import java.util.Iterator;
  * @author zhishun.cai
  * @date 2025/2/10
  */
+@Data
 public class ArrayQueue<E> implements Queue<E>, Iterable<E>{
 
     private E[] array;

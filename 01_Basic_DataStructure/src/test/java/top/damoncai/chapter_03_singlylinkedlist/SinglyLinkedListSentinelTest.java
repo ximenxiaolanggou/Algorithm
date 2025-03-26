@@ -1,7 +1,7 @@
 package top.damoncai.chapter_03_singlylinkedlist;
 
-import junit.framework.TestCase;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

@@ -1,6 +1,5 @@
 package top.damoncai.chapter_01_binarysearch;
 
-import org.junit.Test;
 
 /**
  *
@@ -10,13 +9,6 @@ import org.junit.Test;
  */
 public class Case_02_BinarySearchProcess {
 
-    @Test
-    public void mian() {
-        int arr[] = {1,2,3,4,5,6,7};
-        int target = 7;
-        int targetIndex = binarySearch(arr,target);
-        System.out.println(targetIndex);
-    }
 
 
     /**

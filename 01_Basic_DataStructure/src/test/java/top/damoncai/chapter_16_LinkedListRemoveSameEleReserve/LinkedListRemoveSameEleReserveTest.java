@@ -1,6 +1,6 @@
 package top.damoncai.chapter_16_LinkedListRemoveSameEleReserve;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

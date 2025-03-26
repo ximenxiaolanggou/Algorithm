@@ -1,11 +1,11 @@
 package top.damoncai.chapter_25_ArrayQueue;
 
-import org.junit.Test;
+
+import org.junit.jupiter.api.Test;
 import top.damoncai.chapter_24_LinkedListQueue.LinkedListQueue;
 
 import java.util.Iterator;
 
-import static org.junit.Assert.*;
 
 /**
  * @author zhishun.cai

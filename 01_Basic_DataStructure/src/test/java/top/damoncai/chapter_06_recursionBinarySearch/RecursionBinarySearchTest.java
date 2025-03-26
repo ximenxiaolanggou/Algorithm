@@ -1,12 +1,11 @@
 package top.damoncai.chapter_06_recursionBinarySearch;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 /**
  *
  *

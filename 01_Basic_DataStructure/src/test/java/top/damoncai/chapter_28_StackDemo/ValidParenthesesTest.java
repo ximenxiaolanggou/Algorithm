@@ -1,8 +1,6 @@
-package top.damoncai.chapter_28_ValidParentheses;
+package top.damoncai.chapter_28_StackDemo;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Test;
 
 /**
  * @author zhishun.cai

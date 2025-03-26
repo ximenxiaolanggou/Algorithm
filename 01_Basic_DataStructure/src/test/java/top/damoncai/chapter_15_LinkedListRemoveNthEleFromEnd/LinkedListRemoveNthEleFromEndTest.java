@@ -1,6 +1,6 @@
 package top.damoncai.chapter_15_LinkedListRemoveNthEleFromEnd;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 
 /**

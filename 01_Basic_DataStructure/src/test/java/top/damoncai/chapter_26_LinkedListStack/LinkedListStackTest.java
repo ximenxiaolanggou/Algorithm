@@ -1,10 +1,9 @@
 package top.damoncai.chapter_26_LinkedListStack;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Iterator;
 
-import static org.junit.Assert.*;
 
 /**
  * @author zhishun.cai

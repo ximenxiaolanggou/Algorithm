@@ -1,11 +1,10 @@
 package top.damoncai.chapter_05_bidirectionallinkedlistsentinel;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.sql.SQLOutput;
 import java.util.Iterator;
 
-import static org.junit.Assert.*;
 
 /**
  * @author zhishun.cai

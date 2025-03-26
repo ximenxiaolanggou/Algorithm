@@ -1,5 +1,7 @@
 package top.damoncai.chapter_13_LinkedListReverse;
 
+import ch.qos.logback.core.util.StringCollectionUtil;
+
 /**
  * 单项链表
  * @author zhishun.cai
@@ -23,5 +25,20 @@ public class ListNode<T> {
             return;
         }
         System.out.println(sb.toString());
+    }
+
+    public static <T> ListNode<T> of(T ...eles) {
+        if(eles == null || eles.length == 0) {
+            return null;
+        }
+        ListNode<T> listNode = new ListNode<>();
+        Node<T> tNode = new Node<>(eles[0]);
+        listNode.header = tNode;
+
+        for (int i = 1; i < eles.length; i++) {
+            tNode.next = new Node<>(eles[i]);
+            tNode = tNode.next;
+        }
+        return listNode;
     }
 }
