@@ -1,10 +1,10 @@
-package top.damoncai.chapter_35_BinaryTraverse;
+package top.damoncai.chapter_35_BinaryTraverseRecursion;
 
 
 import java.util.List;
 
 /**
- * 二叉树遍历
+ * 二叉树遍历 - 递归
  *
  * @author zhishun.cai
  * @date 2025/3/31
