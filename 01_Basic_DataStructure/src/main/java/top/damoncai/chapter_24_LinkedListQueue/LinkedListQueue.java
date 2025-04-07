@@ -108,4 +108,8 @@ public class LinkedListQueue<E> implements Queue<E>, Iterable<E>{
             }
         };
     }
+
+    public Integer getSize() {
+        return size;
+    }
 }
