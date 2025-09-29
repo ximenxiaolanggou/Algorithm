@@ -1,7 +1,10 @@
 package top.damoncai.chapter_39_BinarySearchTree;
 
+import lombok.ToString;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,11 +21,11 @@ class BinarySearchTreeTest {
     static {
         BinarySearchTree.BSTNode<Integer,String> n1 = new BinarySearchTree.BSTNode<>(1, "张三丰");
         BinarySearchTree.BSTNode<Integer,String> n2 = new BinarySearchTree.BSTNode<>(3, "张无忌");
-        BinarySearchTree.BSTNode<Integer,String> n3 = new BinarySearchTree.BSTNode<>(2, "武当",n1, n2);
+        BinarySearchTree.BSTNode<Integer,String> n3 = new BinarySearchTree.BSTNode<>(2, "武当",n1, null);
 
         BinarySearchTree.BSTNode<Integer,String> n4 = new BinarySearchTree.BSTNode<>(5, "白眉鹰王");
         BinarySearchTree.BSTNode<Integer,String> n5 = new BinarySearchTree.BSTNode<>(7, "吸血鬼王");
-        BinarySearchTree.BSTNode<Integer,String> n6 = new BinarySearchTree.BSTNode<>(6, "魔教",n4, n5);
+        BinarySearchTree.BSTNode<Integer,String> n6 = new BinarySearchTree.BSTNode<>(6, "魔教",n4, null);
 
         BinarySearchTree.BSTNode<Integer,String> root = new BinarySearchTree.BSTNode<>(4, "倚天屠龙记",n3, n6);
 
@@ -128,5 +131,72 @@ class BinarySearchTreeTest {
         Assertions.assertEquals("倚天屠龙记", bst2.successor(3));
         Assertions.assertEquals("白眉鹰王", bst2.successor(5));
         Assertions.assertEquals("武当", bst2.successor(1));
+    }
+
+    @Test
+    void delete() {
+        bst.delete(6);
+        System.out.println(bst);
+    }
+
+    @Test
+    void less() {
+        List res = bst2.less(6);
+        Assertions.assertEquals(res,List.of("张三丰","武当","张无忌","倚天屠龙记","金毛狮王"));
+    }
+
+    @Test
+    void more() {
+        List res = bst2.more(6);
+        Assertions.assertEquals(res,List.of("吸血鬼王","魔教"));
+    }
+
+    @Test
+    void between() {
+        List res = bst2.between(5,7);
+        Assertions.assertEquals(res,List.of("白眉鹰王"));
+    }
+
+    /**
+     * 校验二叉搜索树是否合法
+     */
+    @Test
+    void checkBinarySearchTree() {
+        boolean iggle = bst2.checkBinarySearchTree();
+        Assertions.assertTrue(iggle);
+    }
+
+    /**
+     * 递归方式判断二叉搜索树是否合法
+     */
+    @Test
+    void checkBinarySearchTreeRecursion() {
+        boolean iggle = bst2.checkBinarySearchTreeRecursion();
+        Assertions.assertTrue(iggle);
+    }
+
+    /**
+     * 范围方式判断二叉搜索树是否合法
+     */
+    @Test
+    void checkBinarySearchTreeRange() {
+        boolean res = bst2.checkBinarySearchTreeRange();
+        Assertions.assertTrue(res);
+    }
+
+    @Test
+    void between2() {
+        List res = bst2.between2(5,7);
+        Assertions.assertEquals(res,List.of("白眉鹰王"));
+    }
+
+    @Test
+    void doBuildBinarySearchTreeInsert() {
+        Integer data[] = {8,4,2,6,12};
+        BinarySearchTree<Integer, Integer> tree = new BinarySearchTree<>();
+        BinarySearchTree.BSTNode<Integer, Integer> node = tree.buildBinarySearchTreeInsert(data);
+
+        boolean check = new BinarySearchTree(node).checkBinarySearchTree();
+        Assertions.assertTrue(check);
     }
 }
